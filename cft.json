@@ -1,0 +1,27 @@
+{
+    "Description": "EC2 and RDS instance in existing VPC",
+    "Resources": {
+        "ec2instance": {
+            "Properties": {
+                "ImageId": "ami-01f05461",
+                "InstanceType": "t2.micro",
+                "SecurityGroupIds": [
+                    "sg-d40411ad"
+                ]
+            },
+            "Type": "AWS::EC2::Instance"
+        },
+        "rdsinstance": {
+            "Properties": {
+                "AllocatedStorage": 5,
+                "DBInstanceClass": "db.m3.medium",
+                "DBName": "Test",
+                "Engine": "MySQL",
+                "MasterUserPassword": "password",
+                "MasterUsername": "admin",
+                "StorageEncrypted": "true"
+            },
+            "Type": "AWS::RDS::DBInstance"
+        }
+    }
+}
