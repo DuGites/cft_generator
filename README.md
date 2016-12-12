@@ -14,3 +14,5 @@ to the file. There is a dryrun flag as well which will generate the CFT for you.
     2. python cft_gen.py --rdsclass=db.m3.medium --rdsusername=admin --rdspassword=password
        --dbname=Test --dbsize=5 --instance_type=t2.micro --ec2_ports 80 --ec2_ports 443
        --dryrun=0 --filename=cft.json
+
+An example of the generated cft.json has been added to the repo.
