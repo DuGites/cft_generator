@@ -3,6 +3,9 @@
 The AWS Python Wrapper Generates a CF Template and Spins the Stack with the CFT.
 Make sure that you setup your virual enviroment and install the dependencies. 
 Also make sure that then VPC_ID parameter is given a value that exists in your console.
+The script will create a security group with the specific permissions for the given ports.
+It will then spin up the ec2 instance and associate the security group to it followed by 
+the rds instance.
   
     1. pip install requirements.txt
 To execute the script you would need to run the following command. Default values have
